@@ -1,0 +1,73 @@
+<main>
+
+  <header class="problem-header">
+    <h1>
+      DojoPuzzles - Analizando urls
+    </h1>
+
+    <a href="http://dojopuzzles.com/problemas/exibe/analisando-urls/" target="_BLANK" class="problem-link">
+      See more.
+    </a>
+  </header>
+
+  <section class="problem">
+
+    <div class="problem-description">
+      <p>
+        Dada uma URL, desenvolva um programa que indique se a URL é válida ou não e, caso seja válida, retorne as suas partes constituintes.
+      </p>
+    </div>
+    
+    <div class="problem-description">
+      <h1 class="example-label">Exemplo:</h1>
+      <div class="problem-example">
+        <p>
+          http: http://www.google.com/mail?user=fulano
+        </p>                  
+        <t-json-viewer [json]="urlHttp"></t-json-viewer>
+      </div>
+
+      <div class="problem-example">
+        <p>
+          ssh: ssh://fulano%senha@git.com/
+        </p>                  
+        <t-json-viewer [json]="urlSsh"></t-json-viewer>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="live-problem">
+
+    <header class="live-problem-header">
+      <div class="live-problem-container">
+        <div class="problem-header-content">
+          <h3>Teste:</h3>
+          <p>Insira uma url HTTP/SSH</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="live-problem-input">
+      <div class="live-problem-container">
+        <div class="problem-header-content">
+          <input type="text" [(ngModel)]="urlData" placeholder="Insira uma URL">
+          <button class="input-button" (click)="validURL(urlData)" [disabled]="!urlData">Validar</button>
+        </div>
+      </div>      
+    </section>
+
+    <section class="live-problem-result">
+      <div class="live-problem-container">
+        <div class="problem-header-content">
+          <h3>result:</h3>
+          <div *ngIf="resultCheckURL !== 0">
+            <t-json-viewer [json]="resultCheckURL"></t-json-viewer>
+          </div>
+          <p *ngIf="resultCheckURL === 0">URL inválida</p>
+        </div>
+      </div>
+    </section>
+    
+  </section>
+</main>

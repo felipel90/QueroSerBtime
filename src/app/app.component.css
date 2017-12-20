@@ -1,0 +1,100 @@
+main {
+  font-family: sans-serif;
+  padding: 10px 50px;
+}
+
+.problem-header {
+  padding-bottom: 20px;
+}
+
+.problem-header h1 {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+
+.problem {
+  width: 50%;
+  float: left;
+}
+
+.problem h1 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.problem .problem-example {  
+  margin-bottom: 10px;
+}
+
+.problem .example-label {
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.problem .problem-link {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.problem-description {
+  background: #f9f8f8;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+}
+
+.live-problem {
+  width: 50%;
+  float: left;
+}
+
+.live-problem-container {
+  margin: 0 15px;
+}
+
+.live-problem .live-problem-header {
+  margin-bottom: 20px;
+}
+
+.live-problem .problem-header-content {
+  background: #f9f8f8;
+  padding: 10px 15px;
+}
+
+.live-problem .live-problem-header h3 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.live-problem .live-problem-header p {
+  margin: 0;  
+}
+
+.live-problem .live-problem-input {
+  margin-bottom: 20px;
+}
+
+.live-problem .live-problem-input input {
+  width: calc(100% - 25px);
+  font-size: 16px;
+  color: #656565;
+  padding: 7px 10px;
+  margin-bottom: 5px;
+  border-radius: 1px;
+  border: 1px solid #e6e6e6;
+}
+
+.live-problem .live-problem-input .input-button {
+  margin-top: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: #f9f8f8;
+  border: 1px solid #d2d2d2;
+}
+
+.live-problem-result h3{
+  margin: 0;
+  padding-bottom: 20px;
+}
