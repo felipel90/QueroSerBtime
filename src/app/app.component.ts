@@ -12,17 +12,15 @@ export class AppComponent {
   resultCheckURL: any;
   urlData: any;
 
-  constructor(private urlParseService: UrlParseService) {             
-    this.urlHttp = urlParseService.UrlParse().isValid('http://www.google.com/mail?user=fulano');
-    this.urlSsh = urlParseService.UrlParse().isValid('ssh://fulano%senha@git.com/');
+  constructor(private urlParseService: UrlParseService) {
+    this.urlHttp = urlParseService.isValid('http://www.google.com/mail?user=fulano');
+    this.urlSsh = urlParseService.isValid('ssh://fulano%senha@git.com/');
   }
 
   public validURL(value) {
     if (value === 0) {
       return this.resultCheckURL = {};
     }
-    this.resultCheckURL = this.urlParseService.UrlParse().isValid(value)
-    console.log('value', this.resultCheckURL);
-    
+    this.resultCheckURL = this.urlParseService.isValid(value)
   }
 }
